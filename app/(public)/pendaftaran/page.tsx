@@ -84,8 +84,8 @@ export default function PendaftaranKandidat() {
             <h2 className="text-lg font-bold border-l-4 border-blue-600 pl-3 text-slate-700">基本情報 (Informasi Dasar)</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="md:col-span-2 space-y-4">
-                <input type="text" placeholder="フリガナ (Furigana)" className="w-full border-b p-2 outline-none focus:border-blue-500" value={formData.furigana} onChange={e => setFormData({...formData, furigana: e.target.value})} />
-                <input type="text" placeholder="名前 (Nama Lengkap)" required className="w-full border-b p-2 text-lg font-bold outline-none focus:border-blue-500" value={formData.nama_lengkap} onChange={e => setFormData({...formData, nama_lengkap: e.target.value})} />
+                <input type="text" placeholder="フリガナ (Furigana)" className="placeholder:text-slate-500 w-full border-b p-2 outline-none focus:border-blue-500" value={formData.furigana} onChange={e => setFormData({...formData, furigana: e.target.value})} />
+                <input type="text" placeholder="名前 (Nama Lengkap)" required className="placeholder:text-slate-500 w-full border-b p-2 text-lg font-bold outline-none focus:border-blue-500" value={formData.nama_lengkap} onChange={e => setFormData({...formData, nama_lengkap: e.target.value})} />
               </div>
               <div className="bg-slate-50 p-4 rounded-lg flex items-center justify-between">
                 <div>
@@ -316,7 +316,7 @@ export default function PendaftaranKandidat() {
               <label className="text-xs font-bold text-slate-500 uppercase">資格 (SSW & Lainnya)</label>
               {formData.sertifikat.map((item: any, index: number) => (
                 <div key={index} className="flex flex-wrap gap-2 mb-2">
-                  <input placeholder="Nama Sertifikat (Contoh: 自動車整備)" className="flex-grow border p-2 rounded shadow-sm" 
+                  <input placeholder="Nama Sertifikat (Contoh: 自動車整備)" className="placeholder:text-slate-500 flex-grow border p-2 rounded shadow-sm" 
                     onChange={e => {
                       const newCert = [...formData.sertifikat];
                       newCert[index].nama_ssw = e.target.value;
@@ -350,13 +350,13 @@ export default function PendaftaranKandidat() {
             <div className="space-y-2">
               {formData.pengalaman.map((item: any, index: number) => (
                 <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-4 border-b pb-4">
-                  <input placeholder="Bidang Pekerjaan & Nama Perusahaan" className="w-full border p-2 rounded" 
+                  <input placeholder="Bidang Pekerjaan & Nama Perusahaan" className="placeholder:text-slate-500 w-full border p-2 rounded" 
                     onChange={e => {
                       const newExp = [...formData.pengalaman];
                       newExp[index].bidang = e.target.value;
                       setFormData({...formData, pengalaman: newExp});
                     }}/>
-                  <input placeholder="Periode (Contoh: 2025/05/27~2026/04/24)" className="w-full border p-2 rounded" 
+                  <input placeholder="Periode (Contoh: 2025/05/27~2026/04/24)" className="placeholder:text-slate-500 w-full border p-2 rounded" 
                     onChange={e => {
                       const newExp = [...formData.pengalaman];
                       newExp[index].periode = e.target.value;
@@ -371,7 +371,7 @@ export default function PendaftaranKandidat() {
           {/* BAGIAN 5: REMARKS */}
           <section>
             <label className="block text-sm font-bold text-slate-700 mb-2">備考 (Detail Diri & Pekerjaan Sebelumnya)</label>
-            <textarea rows={6} className="w-full border border-slate-200 p-4 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" 
+            <textarea rows={6} className="placeholder:text-slate-500 w-full border border-slate-200 p-4 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" 
               placeholder="Jelaskan detail pekerjaan Anda sebelumnya sebagai referensi bagi perusahaan..."
               onChange={e => setFormData({...formData, bikou: e.target.value})}></textarea>
           </section>
