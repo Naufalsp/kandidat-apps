@@ -215,8 +215,10 @@ export default function PendaftaranKandidat() {
                   <option value="技能実習2号">技能実習2号 (Pemagang Tahun 2 & 3)</option>
                   <option value="技能実習3号">技能実習3号 (Pemagang Tahun 4 & 5)</option>
                   <option value="特定技能1号">特定技能1号 (TG 1)</option>
+                  <option value="特定技能2号">特定技能2号 (TG 2)</option>
+                  <option value="特定活動">特定活動 (Tokutei Katsudou)</option>
                   <option value="留学生">留学生 (Pelajar)</option>
-                  <option value="国外">国外 (Tidak Ada)</option>
+                  <option value="国外">なし (Tidak Ada)</option>
                 </select>
               </div>
               <div>
